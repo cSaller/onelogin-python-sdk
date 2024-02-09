@@ -39,7 +39,7 @@ class CreateApp200Response(BaseModel):
     # data type: GenericApp
     oneof_schema_3_validator: Optional[GenericApp] = None
     actual_instance: Any
-    one_of_schemas: List[str] = Field(CREATEAPP200RESPONSE_ONE_OF_SCHEMAS, const=True)
+    one_of_schemas: List[str] = Field(CREATEAPP200RESPONSE_ONE_OF_SCHEMAS, Literal=True)
 
     class Config:
         validate_assignment = True

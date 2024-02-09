@@ -39,7 +39,7 @@ class CreateAppRequest(BaseModel):
     # data type: GenericApp
     oneof_schema_3_validator: Optional[GenericApp] = None
     actual_instance: Any
-    one_of_schemas: List[str] = Field(CREATEAPPREQUEST_ONE_OF_SCHEMAS, const=True)
+    one_of_schemas: List[str] = Field(CREATEAPPREQUEST_ONE_OF_SCHEMAS, Literal=True)
 
     class Config:
         validate_assignment = True

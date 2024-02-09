@@ -36,7 +36,7 @@ class GetEmailSettings200Response(BaseModel):
     # data type: EmailConfig
     oneof_schema_2_validator: Optional[EmailConfig] = None
     actual_instance: Any
-    one_of_schemas: List[str] = Field(GETEMAILSETTINGS200RESPONSE_ONE_OF_SCHEMAS, const=True)
+    one_of_schemas: List[str] = Field(GETEMAILSETTINGS200RESPONSE_ONE_OF_SCHEMAS, Literal=True)
 
     class Config:
         validate_assignment = True

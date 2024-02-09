@@ -36,7 +36,7 @@ class MessageTemplateTemplate(BaseModel):
     # data type: MessageTemplateTemplateOneOf1
     oneof_schema_2_validator: Optional[MessageTemplateTemplateOneOf1] = None
     actual_instance: Any
-    one_of_schemas: List[str] = Field(MESSAGETEMPLATETEMPLATE_ONE_OF_SCHEMAS, const=True)
+    one_of_schemas: List[str] = Field(MESSAGETEMPLATETEMPLATE_ONE_OF_SCHEMAS, Literal=True)
 
     class Config:
         validate_assignment = True
