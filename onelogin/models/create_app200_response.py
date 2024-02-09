@@ -44,9 +44,6 @@ class CreateApp200Response(BaseModel):
     class Config:
         validate_assignment = True
 
-    discriminator_value_class_map = {
-    }
-
     def __init__(self, *args, **kwargs):
         if args:
             if len(args) > 1:
