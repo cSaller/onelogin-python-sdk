@@ -24,7 +24,6 @@ from onelogin.models.generic_app import GenericApp
 from onelogin.models.oidc_app import OidcApp
 from onelogin.models.saml_app import SamlApp
 from typing import Any, List
-from pydantic import StrictStr, Field
 
 CREATEAPP200RESPONSE_ONE_OF_SCHEMAS = ["GenericApp", "OidcApp", "SamlApp"]
 
@@ -43,6 +42,9 @@ class CreateApp200Response(BaseModel):
 
     class Config:
         validate_assignment = True
+
+    discriminator_value_class_map: IgnoredType = {
+    }
 
     def __init__(self, *args, **kwargs):
         if args:
